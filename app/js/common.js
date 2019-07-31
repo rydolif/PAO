@@ -30,12 +30,14 @@ $(function() {
       },
       messages: {
         name: "Введите Ваше имя",
-        phone: "Введите Ваш телефон",
+        mail: "Введите Вашу почту",
+        text: "Введите Ваше сообщение",
       },
       submitHandler: function(form) {
         var t = {
           name: jQuery('.form-' + index).find("input[name=name]").val(),
-          phone: jQuery('.form-' + index).find("input[name=phone]").val(),
+          mail: jQuery('.form-' + index).find("input[name=mail]").val(),
+          text: jQuery('.form-' + index).find("input[name=text]").val(),
           subject: jQuery('.form-' + index).find("input[name=subject]").val()
         };
         ajaxSend('.form-' + index, t);
@@ -69,44 +71,9 @@ $(function() {
       }
   });
 
-//-------------------------скорость якоря---------------------------------------
-  $(".header__list").on("click","a", function (event) {
-      event.preventDefault();
-      var id  = $(this).attr('href'),
-          top = $(id).offset().top;
-      $('body,html').animate({scrollTop: top - 60}, 'slow', 'swing');
-  //--------------------закриття меню при кліку на ссилку якоря--------------------
-     // $('.hamburger').removeClass('hamburger--active');
-     // $('.header-menu').removeClass('header-menu');
-     // $('.header--active').removeClass('header--active');
-     // $('.nav--active').removeClass('nav--active');
-
-  });
-
-  // //-------------------------------анімація цифр---------------------------------------
-  //   var show = true;
-  //   var countbox = ".about-statistics__container";
-  //   $(window).on("scroll load resize", function () {
-  //       if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
-  //       var w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
-  //       var e_top = $(countbox).offset().top; // Расстояние от блока со счетчиками до верха всего документа
-  //       var w_height = $(window).height(); // Высота окна браузера
-  //       var d_height = $(document).height(); // Высота всего документа
-  //       var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
-  //       if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
-  //           $('.about-statistics__item h3').spincrement({
-  //               thousandSeparator: "",
-  //               duration: 2000
-  //           });
-  //           show = false;
-  //       }
-  //   });
+  if($(this).scrollTop()>20){
+      $('.header').addClass('header--active');
+  }
 
   
 });
-
-//----------------------------------------preloader----------------------------------
-
-  // $(window).on('load', function(){
-  //   $('.preloader').delay(1000).fadeOut('slow');
-  // });
