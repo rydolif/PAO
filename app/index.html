@@ -36,7 +36,7 @@
 					<li class="click nav__list">
 						<a href="#about">О компании</a>
 						<ul>
-							<li><a href="#">О нас</a></li>
+							<li><a href="about.html">О нас</a></li>
 							<li><a href="#">Написать гендиректору</a></li>
 						</ul>
 					</li>
@@ -90,7 +90,7 @@
 
 			<div class="section__header">
 				<h2>О компании</h2>
-				<a href="#">ПОДРОБНЕЕ <img src="img/more.svg" alt=""></a>
+				<a href="about.html">ПОДРОБНЕЕ <img src="img/more.svg" alt=""></a>
 			</div>
 
 			<div class="about__container">
@@ -466,46 +466,6 @@
 	<!-- modal end-->
 
 	<script src="js/scripts.min.js"></script>
-<script type='text/javascript' src='https://www.youtube.com/iframe_api'></script>
-<script>
-    var players = new Array(3);
 
-    function onYouTubeIframeAPIReady() {
-        players[0] = new YT.Player('player0', {
-            events: {
-                'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange
-            }
-        });
-        players[1] = new YT.Player('player1', {
-            events: {
-                'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange
-            }
-        });
-        players[2] = new YT.Player('player2', {
-            events: {
-                'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange
-            }
-        });
-    }
-
-    function onPlayerReady() {
-//        console.log("hey Im ready");
-        players[1].playVideo();
-    }
-
-    function onPlayerStateChange(event) {
-        var link = event.target.a.id;
-        var newstate = event.data;
-//        console.log("I am " + link + " My state changed to " + newstate);
-        if (newstate == YT.PlayerState.PLAYING) {
-            players.forEach(function(item, i) {
-                if (item.a.id != link) item.pauseVideo();
-            });
-        }
-    }
-</script>
 </body>
 </html>
