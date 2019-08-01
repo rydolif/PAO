@@ -73,6 +73,14 @@
 	.section
 		padding: 25px 0
 
+	.header
+		position: fixed
+
+		&--active, &--menu
+			background: rgba(17, 17, 17, 0.8)
+			padding: 5px 0
+
+
 	.nav
 		position: fixed
 		display: block
@@ -83,26 +91,70 @@
 		top: 106px
 		z-index: -1
 		background: rgba(17, 17, 17, 0.8)
-		transition: all .3s
+		transition: all .6s
+		overflow: auto
 
 		ul
 			display: flex
 			flex-direction: column
 			justify-content: center
-			margin-top: 40px
-			margin-left: 40px
+			margin: 40px 5px
 
 		li
 			margin: 0
 			margin-bottom: 10px
+			overflow: visible
+
+			ul
+				top: -100%
+				left: 0
+				padding: 0
+				background: 0
+				margin: 5px
+
+				&::before
+					display: none
+
+
+				a
+					font-size: 24px
+					padding: 0
+					font-weight: 600
+
+					&::after
+						display: none
+
+			&:hover,
+			&:focus
+				ul
+					position: relative
+					top: 0
 
 		a
+			position: relative
+			display: block
 			color: #fff
 			font-size: 36px
 			font-weight: 800
+			white-space: normal
+
+			&::before
+				display: none
 		
 		&--active
 			right: 0
+
+		&__list
+			&::after
+				content: ''
+				position: absolute
+				right: 0
+				top: 28px
+				border-bottom: 10px solid transparent
+				border-left: 10px solid transparent
+				border-right: 10px solid transparent
+				border-top: 10px solid #fff
+				right: 10px
 
 	.hamburger
 		display: block
@@ -166,9 +218,15 @@
 	h2
 		font-size: 32px
 
+	.header__logo
+		img
+			width: 45px
+
 	.nav
+		top: 79.67px
+
 		a
-			font-size: 32px
+			font-size: 30px
 
 
 	.section

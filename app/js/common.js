@@ -67,7 +67,7 @@ $(function() {
           $('.header').addClass('header--active');
       }
       else if ($(this).scrollTop()<20){
-          $('.header').removeClass('header--active');
+          $('.header').removeClass('header--menu');
       }
   });
 
@@ -75,5 +75,15 @@ $(function() {
       $('.header').addClass('header--active');
   }
 
+    //-------------------------скорость якоря---------------------------------------
+    $(".click").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top - 0}, 'slow', 'swing');
+    // //--------------------закриття меню при кліку на ссилку якоря--------------------
+    //    $('.header').removeClass('header--active');
+    //    $('.header').removeClass('header--menu');
+  });
   
 });
