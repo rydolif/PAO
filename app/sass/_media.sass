@@ -66,6 +66,19 @@
 
 
 @media only screen and (max-width : 767px)
+	.news
+		img
+			max-width: 100%
+			margin-bottom: 8px
+
+		&__list
+
+		&__item
+			width: 49%
+			margin-right: 2%
+
+			&:nth-child(even)
+				margin-right: 0
 
 	h1
 		font-size: 30px
@@ -219,6 +232,15 @@
 
 
 @media only screen and (max-width : 480px)
+	.news
+		&__item
+			width: 100%
+			margin-right: 0
+
+		img
+			margin-right: 0
+
+
 	h2
 		font-size: 32px
 
