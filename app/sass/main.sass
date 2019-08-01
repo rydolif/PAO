@@ -240,7 +240,7 @@
 			min-width: 110px
 			height: 150px
 			overflow: hidden
-			padding-top: 28px
+			padding-top: 28px !important
 			margin-right: 25px
 			color: $text
 			font-size: 24px
@@ -408,33 +408,7 @@
 		padding: 0 10px
 
 	&__form
-		label.error
-			position: absolute
-			bottom: -25px
-			right: 25px
-			left: 25px
-			transition: all .6s
-			color: #fff
-			text-align: center
-			font-weight: 600
-			background-color: red
-			border-radius: 10px
-			font-size: 12px
-			z-index: 1
-
-			&::before
-				content: ''
-				position: absolute
-				left: 50%
-				top: -8px
-				margin-left: -2px
-				border-bottom: 4px solid red
-				border-left: 4px solid transparent
-				border-right: 4px solid transparent
-				border-top: 4px solid transparent
-
 		div
-			position: relative
 			margin-bottom: 5px
 			&:last-child
 				margin-bottom: 0
@@ -489,6 +463,103 @@
 		&:last-child
 			margin-bottom: 0
 
+
+.profile
+
+	h2
+		margin-bottom: 25px
+
+	&__container
+		display: flex
+		justify-content: space-between
+
+	&__img
+		text-align: center
+		margin-right: 20px
+		
+		img
+			box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.2)
+			border-radius: 8px
+			margin-bottom: 15px
+			width: 300px
+
+	&__content
+
+		ul
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+
+		li
+			position: relative
+			width: 48%
+			margin-bottom: 15px
+			padding-left: 13px
+
+			&:last-child
+				margin-bottom: 0
+
+			&::before
+				content: ''
+				position: absolute
+				left: 0
+				top: 8px
+				width: 5px
+				height: 5px
+				border-radius: 50%
+				background: #C4C4C4
+
+		span
+			display: block
+			margin-top: 5px
+			color: $light
+
+		p
+			margin-bottom: 15px
+			font-weight: 500
+
+
+	&__form
+		display: flex
+		padding: 40px
+
+		img
+			display: block
+			margin: 0 auto
+
+
+		&_line
+			display: flex
+			align-items: center
+			justify-content: space-between
+
+			div
+				width: 48%
+
+
+		&_input
+			margin-bottom: 20px
+
+		input
+			font-size: 18px
+			color: $light
+			border-bottom: 2px solid #C4C4C4
+			height: 50px
+			line-height: 50px
+
+			&::placeholder
+				color: $light
+				font-size: 18px
+
+		.form
+			width: 69%
+
+		.btn
+			border-color: $text
+			color: $text
+			height: 50px
+			line-height: 50px
+			padding: 0 50px
 
 
 

@@ -31,12 +31,14 @@ $(function() {
       messages: {
         name: "Введите Ваше имя",
         mail: "Введите Вашу почту",
+        phone: "Введите Вашу телефон",
         text: "Введите Ваше сообщение",
       },
       submitHandler: function(form) {
         var t = {
           name: jQuery('.form-' + index).find("input[name=name]").val(),
           mail: jQuery('.form-' + index).find("input[name=mail]").val(),
+          phone: jQuery('.form-' + index).find("input[name=phone]").val(),
           text: jQuery('.form-' + index).find("input[name=text]").val(),
           subject: jQuery('.form-' + index).find("input[name=subject]").val()
         };
