@@ -10,6 +10,7 @@
 	position: absolute
 	right: 0
 	left: 0
+	top: 0
 	transition: all .6s
 	z-index: 1001
 	padding: 30px 0 15px
@@ -111,7 +112,10 @@
 
 	&--page
 		min-height: 160px
-		padding: 0
+		padding: 0 !important
+
+		video
+			width: 100%
 
 	&__tel
 		display: none
@@ -209,6 +213,7 @@
 
 	b
 		font-weight: 600
+		display: block
 	
 	&--material
 		h2
@@ -265,8 +270,6 @@
 
 			&:last-child
 				margin-right: 0
-
-
 
 
 .services

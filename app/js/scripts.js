@@ -2513,7 +2513,7 @@ $(function() {
           $('.header').addClass('header--active');
       }
       else if ($(this).scrollTop()<20){
-          $('.header').removeClass('header--menu');
+          $('.header').removeClass('header--active');
       }
   });
 
